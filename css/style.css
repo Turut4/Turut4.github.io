@@ -2,14 +2,14 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: lato, sans-serif;
+    font-family: "Noto serif", sans-serif;
     box-sizing: border-box;
 }
 
 /*Variables*/
 
 :root{
-    --main-color: #bf8bfa;
+    --main-color: #815aad;
     --main-text-color: #fff;
     --boder-color: #999;
     --bio-border-color:#617c9c;
@@ -32,13 +32,15 @@
 }
 /*bio container*/
 #bio-container{
-    flex: 1 1 20%;
+    flex: 1 1 15%;
     min-height: 100vh;
     background-color: var(--bio-bg-color);
     text-align: center;
-    padding: 20px 12px;
+    padding: 30px 10px;
     border: 2px solid var(--bio-border-color);
 }
+
+
 #bio-img{
     width: 175px;
     height: 175px;
@@ -105,4 +107,132 @@
     background-color: var(--about-bg-color);
     padding: 50px;
 
+}
+#about-container p{
+    margin-bottom: 20px;
+}
+#name{
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+#btn-projects{
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    color:  var(--main-text-color);
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    transition: .5s;
+    padding: 12px 10px;
+    margin: 25px 0;
+    text-align: center;
+    display: flex;
+    width: 150px;
+}
+
+#btn-projects ion-icon,
+#btn-projects {
+    flex: 1 1 0;
+}
+
+#btn-projects ion-icon{
+    font-size: 20px;
+    max-width: 20px;
+}
+
+#btn-projects:hover{
+    background-color: transparent;
+}
+
+#skills-sections-title{
+    border-top: 1px solid var(--boder-color);
+    padding-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: var(--main-color);
+}
+
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.skill-box{
+    flex: 1 1 40%;
+    margin-bottom: 35px;
+    max-width: 50%;
+    border-left: 6px solid var(--main-color);
+    border-radius: 10px;
+    padding-left: 10px;
+    
+}
+
+.skill-box i{
+    font-size: 50px;
+    padding-right: 15px;
+}
+.skill-box p{
+    color: var(--main-text-color);
+    font-family: "Noto serif", "Lato", sans-serif;
+    font-size: 20px;
+}
+
+.description{
+    color: var(--main-text-color);
+    font-size: 17px;
+}
+
+.thanking{
+    color: #fff;
+    font-weight: 700;
+    margin-top: 60px;
+}
+
+@media(max-width: 450px) {
+    #container{
+        flex-direction:column;
+    }
+    
+    #bio_container{
+        min-height: auto;
+        border-right: none;
+        border-bottom: 5px solid var(--boder-color);
+    }
+    #bio-container p{
+        max-width: 60%;
+        margin: 10px auto;
+
+    }
+    
+    #about-container{
+        text-align: justify;
+
+    }
+    
+
+    #about-container h1{
+        display: none;
+        padding: 30px;
+
+    }
+
+    #about-container .description{
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+        margin-bottom: 30px;
+    }
+
+    .skill-box{
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: left
+    }
+
+    .skill-box i{
+        font-size: 60px;
+    }
 }
